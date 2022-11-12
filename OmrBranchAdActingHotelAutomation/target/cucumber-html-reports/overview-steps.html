@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>mani12</td>
+      <td>02 Oct 2022, 22:00</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">org.stepdefinition.CommonSteps.userShouldVerifyAfterLoginSeccessMassage(java.lang.String)</td>
+              <td>12</td>
+              <td class="duration" data-value="109583333">0.109</td>
+              <td class="duration" data-value="109583333">0.985</td>
+              <td class="duration" data-value="1315000000">1.315</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.stepdefinition.HooksClass.afterClass(io.cucumber.java.Scenario)</td>
+              <td>13</td>
+              <td class="duration" data-value="619000000">0.619</td>
+              <td class="duration" data-value="619000000">0.648</td>
+              <td class="duration" data-value="8047000000">8.047</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.stepdefinition.HooksClass.beforeClass()</td>
+              <td>13</td>
+              <td class="duration" data-value="4612615384">4.612</td>
+              <td class="duration" data-value="4612615384">5.685</td>
+              <td class="duration" data-value="59964000000">59.964</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.stepdefinition.TC1_LoginStep.userIsOnAdActingPage()</td>
+              <td>13</td>
+              <td class="duration" data-value="230769">0.000</td>
+              <td class="duration" data-value="230769">0.001</td>
+              <td class="duration" data-value="3000000">0.003</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.stepdefinition.TC1_LoginStep.userShouldPerformLogin(java.lang.String,java.lang.String)</td>
+              <td>12</td>
+              <td class="duration" data-value="6470166666">6.470</td>
+              <td class="duration" data-value="6470166666">8.600</td>
+              <td class="duration" data-value="77642000000">1:17.642</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.stepdefinition.TC1_LoginStep.userShouldPerformLoginWithEnterKey(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="379000000">0.379</td>
+              <td class="duration" data-value="379000000">0.379</td>
+              <td class="duration" data-value="379000000">0.379</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.stepdefinition.TC1_LoginStep.userShouldVerifyAfterLoginWithInvalidCredentialErrorMsgContains(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="21000000">0.021</td>
+              <td class="duration" data-value="21000000">0.021</td>
+              <td class="duration" data-value="21000000">0.021</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.stepdefinition.TC2_SearchHotelStep.userShouldClickSearchWithoutEnteringAnyFields()</td>
+              <td>1</td>
+              <td class="duration" data-value="33000000">0.033</td>
+              <td class="duration" data-value="33000000">0.033</td>
+              <td class="duration" data-value="33000000">0.033</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.stepdefinition.TC2_SearchHotelStep.userShouldSelectedAllFieldAnd(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>7</td>
+              <td class="duration" data-value="1641000000">1.641</td>
+              <td class="duration" data-value="1641000000">4.570</td>
+              <td class="duration" data-value="11487000000">11.487</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.stepdefinition.TC2_SearchHotelStep.userShouldSlectMandatoryFieldsAnd(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1210000000">1.210</td>
+              <td class="duration" data-value="1210000000">1.210</td>
+              <td class="duration" data-value="1210000000">1.210</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.stepdefinition.TC2_SearchHotelStep.userShouldVerifyAfterSearchingHotelSuccessMessage(java.lang.String)</td>
+              <td>7</td>
+              <td class="duration" data-value="18857142">0.018</td>
+              <td class="duration" data-value="18857142">0.027</td>
+              <td class="duration" data-value="132000000">0.132</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.stepdefinition.TC2_SearchHotelStep.userShouldVerifyAfterSearchingHotelWithDateErrorMsgAnd(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="32000000">0.032</td>
+              <td class="duration" data-value="32000000">0.032</td>
+              <td class="duration" data-value="32000000">0.032</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.stepdefinition.TC2_SearchHotelStep.userShouldVerifyTheErrorMassage(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="17000000">0.017</td>
+              <td class="duration" data-value="17000000">0.017</td>
+              <td class="duration" data-value="17000000">0.017</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.stepdefinition.TC3_SelectHotelStep.userShouldClickContinueWithOutSelectHotel()</td>
+              <td>1</td>
+              <td class="duration" data-value="33000000">0.033</td>
+              <td class="duration" data-value="33000000">0.033</td>
+              <td class="duration" data-value="33000000">0.033</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.stepdefinition.TC3_SelectHotelStep.userShouldSelectHotel()</td>
+              <td>4</td>
+              <td class="duration" data-value="675750000">0.675</td>
+              <td class="duration" data-value="675750000">0.705</td>
+              <td class="duration" data-value="2703000000">2.703</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.stepdefinition.TC3_SelectHotelStep.userShouldVerifyAfterBookingConfirmation(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="19500000">0.019</td>
+              <td class="duration" data-value="19500000">0.021</td>
+              <td class="duration" data-value="78000000">0.078</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.stepdefinition.TC3_SelectHotelStep.userShouldVerifyErrorMsg(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="16000000">0.016</td>
+              <td class="duration" data-value="16000000">0.016</td>
+              <td class="duration" data-value="16000000">0.016</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.stepdefinition.TC4_BookHotelStep.userShouldClickWithOutSelectAnyFields()</td>
+              <td>1</td>
+              <td class="duration" data-value="38000000">0.038</td>
+              <td class="duration" data-value="38000000">0.038</td>
+              <td class="duration" data-value="38000000">0.038</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.stepdefinition.TC4_BookHotelStep.userShouldEnterAllFieldsForBookingAnd(java.lang.String,java.lang.String,java.lang.String,io.cucumber.datatable.DataTable)</td>
+              <td>2</td>
+              <td class="duration" data-value="716000000">0.716</td>
+              <td class="duration" data-value="716000000">0.805</td>
+              <td class="duration" data-value="1432000000">1.432</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.stepdefinition.TC4_BookHotelStep.userShouldVerifyConfirmMsg(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="6599000000">6.599</td>
+              <td class="duration" data-value="6599000000">7.517</td>
+              <td class="duration" data-value="13198000000">13.198</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.stepdefinition.TC4_BookHotelStep.userShouldVerifyErrorMsgAnd(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="102000000">0.102</td>
+              <td class="duration" data-value="102000000">0.102</td>
+              <td class="duration" data-value="102000000">0.102</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.stepdefinition.TC5_CancelBookingStep.userShouldCancelTheGeneratedOrderId()</td>
+              <td>1</td>
+              <td class="duration" data-value="7273000000">7.273</td>
+              <td class="duration" data-value="7273000000">7.273</td>
+              <td class="duration" data-value="7273000000">7.273</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.stepdefinition.TC5_CancelBookingStep.userShouldCencelTheExistingOrderId(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="6953000000">6.953</td>
+              <td class="duration" data-value="6953000000">6.953</td>
+              <td class="duration" data-value="6953000000">6.953</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.stepdefinition.TC5_CancelBookingStep.userShouldVerifyCancelledOrderIdSuccessMsg(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="7241000000">7.241</td>
+              <td class="duration" data-value="7241000000">7.607</td>
+              <td class="duration" data-value="14482000000">14.482</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>24</td>
+            <td>103</td>
+            <td class="duration">2.005</td>
+            <td class="duration">1:17.642</td>
+            <td class="duration">3:26.590</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
