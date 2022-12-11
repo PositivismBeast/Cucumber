@@ -31,6 +31,7 @@ public class HooksClass extends Baseclass {
 		getDriver(getPropertiesFileValue("browser"));
 		enterUrl(getPropertiesFileValue("url"));
 		maximizeWindow();
+		System.out.println("Window maximized");
 	}
 
 	/**

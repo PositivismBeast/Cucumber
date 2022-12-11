@@ -30,7 +30,7 @@ PageFactory.initElements(driver, this);
 	@FindBy(xpath="//label[text()='Please Select a Hotel']")
 	private WebElement txtHotelErrorMsg;
 	
-	@FindBy(xpath="//td[text()='Select Hotel ']")
+	@FindBy(xpath="//td[text()='Book A Hotel ']")
 	private WebElement txtSearchSuccessMsg;
 	
 	public WebElement getTxtSearchSuccessMsg() {
@@ -57,7 +57,7 @@ PageFactory.initElements(driver, this);
 	public void selectHotelAndClick() {
 		
 		elementClick(getBtnClick());
-		elementClick(getBtnContinue());
+		
 	}
 	/**
 	 * @see WithOut Select hotel Click Continue
