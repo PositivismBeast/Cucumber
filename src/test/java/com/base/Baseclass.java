@@ -49,6 +49,11 @@ public class Baseclass {
 		wait.until(ExpectedConditions.visibilityOf(element));
 
 	}
+	
+	
+	
+	
+	int i=0;
 
 	/**
 	 * 
