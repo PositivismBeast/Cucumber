@@ -38,6 +38,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Baseclass {
 	public static WebDriver driver;
 	int i=0;
+	int j=123;
 	/**
 	 * 
 	 * @param element
