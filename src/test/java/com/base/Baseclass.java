@@ -39,7 +39,7 @@ public class Baseclass {
 	public static WebDriver driver;
 	int i=0;
 	int j=123;
-	int k=12;
+	int k=12; int l=1;
 	/**
 	 * 
 	 * @param element
